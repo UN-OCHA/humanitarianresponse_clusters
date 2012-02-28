@@ -112,6 +112,55 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+
+  /* Display: Home */
+  $handler = $view->new_display('panel_pane', 'Home', 'panel_pane_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Image */
+  $handler->display->display_options['fields']['field_cluster_image']['id'] = 'field_cluster_image';
+  $handler->display->display_options['fields']['field_cluster_image']['table'] = 'field_data_field_cluster_image';
+  $handler->display->display_options['fields']['field_cluster_image']['field'] = 'field_cluster_image';
+  $handler->display->display_options['fields']['field_cluster_image']['label'] = '';
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_cluster_image']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_cluster_image']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_cluster_image']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_cluster_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_cluster_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_cluster_image']['field_api_classes'] = 0;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['name']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['name']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['name']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 1;
   $translatables['clusters'] = array(
     t('Master'),
     t('Clusters'),
@@ -123,6 +172,8 @@ function humanitarianresponse_clusters_views_default_views() {
     t('Desc'),
     t('Page'),
     t('Block'),
+    t('Home'),
+    t('View panes'),
   );
   $export['clusters'] = $view;
 
