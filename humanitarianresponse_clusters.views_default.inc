@@ -24,7 +24,9 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Clusters';
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '518400';
+  $handler->display->display_options['cache']['output_lifespan'] = '518400';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -133,8 +135,8 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler->display->display_options['fields']['description']['hide_alter_empty'] = 1;
   $handler->display->display_options['path'] = 'clusters';
 
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
+  /* Display: Menu */
+  $handler = $view->new_display('block', 'Menu', 'block');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -143,11 +145,10 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
 
   /* Display: Home */
-  $handler = $view->new_display('panel_pane', 'Home', 'panel_pane_1');
+  $handler = $view->new_display('block', 'Home', 'block_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '3';
-  $handler->display->display_options['style_options']['alignment'] = 'vertical';
   $handler->display->display_options['style_options']['fill_single_line'] = 1;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
@@ -199,6 +200,7 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler->display->display_options['fields']['name']['hide_empty'] = 0;
   $handler->display->display_options['fields']['name']['empty_zero'] = 0;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 1;
+  $handler->display->display_options['block_description'] = 'Clusters Home Page';
   $export['clusters'] = $view;
 
   return $export;
