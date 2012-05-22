@@ -315,7 +315,7 @@ function humanitarianresponse_clusters_field_default_fields() {
       'entity_type' => 'taxonomy_term',
       'field_name' => 'field_cluster_lead_agencies',
       'label' => 'Lead Agencies',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
