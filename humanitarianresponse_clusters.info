@@ -16,7 +16,6 @@ features[features_api][] = api:1
 features[field][] = taxonomy_term-clusters-field_cluster_co_partners
 features[field][] = taxonomy_term-clusters-field_cluster_coordination_name
 features[field][] = taxonomy_term-clusters-field_cluster_coordinator_email
-features[field][] = taxonomy_term-clusters-field_cluster_image
 features[field][] = taxonomy_term-clusters-field_cluster_lead_agencies
 features[field][] = taxonomy_term-clusters-field_cluster_prefix
 features[field][] = taxonomy_term-clusters-field_cluster_strategy_activites
