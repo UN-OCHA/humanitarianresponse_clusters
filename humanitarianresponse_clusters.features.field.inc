@@ -464,7 +464,6 @@ function humanitarianresponse_clusters_field_default_fields() {
   t('Cluster Coordinator');
   t('Co-leads/ Partners');
   t('Email');
-  t('Image');
   t('Lead Agencies');
   t('Prefix');
   t('Strategy');
