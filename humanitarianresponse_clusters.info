@@ -6,6 +6,7 @@ php = 5.2.4
 dependencies[] = email
 dependencies[] = features
 dependencies[] = humanitarianresponse_organizations
+dependencies[] = i18n_taxonomy
 dependencies[] = image
 dependencies[] = menu
 dependencies[] = menu_token
