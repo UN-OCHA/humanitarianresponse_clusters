@@ -196,6 +196,20 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['block_description'] = 'Clusters Home Page';
+  $translatables['clusters'] = array(
+    t('Master'),
+    t('Clusters'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Page'),
+    t('Menu'),
+    t('Home'),
+    t('Clusters Home Page'),
+  );
   $export['clusters'] = $view;
 
   return $export;

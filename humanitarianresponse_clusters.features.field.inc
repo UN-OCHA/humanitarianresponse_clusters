@@ -10,7 +10,7 @@
 function humanitarianresponse_clusters_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'taxonomy_term-clusters-field_cluster_co_partners'
+  // Exported field: 'taxonomy_term-clusters-field_cluster_co_partners'.
   $fields['taxonomy_term-clusters-field_cluster_co_partners'] = array(
     'field_config' => array(
       'active' => '1',
@@ -31,6 +31,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'views_base_columns' => array(),
@@ -73,7 +74,7 @@ function humanitarianresponse_clusters_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-clusters-field_cluster_coordination_name'
+  // Exported field: 'taxonomy_term-clusters-field_cluster_coordination_name'.
   $fields['taxonomy_term-clusters-field_cluster_coordination_name'] = array(
     'field_config' => array(
       'active' => '1',
@@ -94,6 +95,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -137,7 +139,7 @@ function humanitarianresponse_clusters_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-clusters-field_cluster_coordinator_email'
+  // Exported field: 'taxonomy_term-clusters-field_cluster_coordinator_email'.
   $fields['taxonomy_term-clusters-field_cluster_coordinator_email'] = array(
     'field_config' => array(
       'active' => '1',
@@ -147,6 +149,7 @@ function humanitarianresponse_clusters_field_default_fields() {
       'field_name' => 'field_cluster_coordinator_email',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'email',
       'settings' => array(
         'views_base_columns' => array(),
@@ -188,7 +191,7 @@ function humanitarianresponse_clusters_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-clusters-field_cluster_lead_agencies'
+  // Exported field: 'taxonomy_term-clusters-field_cluster_lead_agencies'.
   $fields['taxonomy_term-clusters-field_cluster_lead_agencies'] = array(
     'field_config' => array(
       'active' => '1',
@@ -209,6 +212,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           0 => 'tid',
         ),
       ),
+      'locked' => '0',
       'module' => 'taxonomy',
       'settings' => array(
         'allowed_values' => array(
@@ -217,6 +221,7 @@ function humanitarianresponse_clusters_field_default_fields() {
             'parent' => '0',
           ),
         ),
+        'options_list_callback' => 'i18n_taxonomy_allowed_values',
         'views_base_columns' => array(),
         'views_base_table' => 0,
       ),
@@ -254,7 +259,7 @@ function humanitarianresponse_clusters_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-clusters-field_cluster_prefix'
+  // Exported field: 'taxonomy_term-clusters-field_cluster_prefix'.
   $fields['taxonomy_term-clusters-field_cluster_prefix'] = array(
     'field_config' => array(
       'active' => '1',
@@ -275,6 +280,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -318,7 +324,7 @@ function humanitarianresponse_clusters_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-clusters-field_cluster_strategy_activites'
+  // Exported field: 'taxonomy_term-clusters-field_cluster_strategy_activites'.
   $fields['taxonomy_term-clusters-field_cluster_strategy_activites'] = array(
     'field_config' => array(
       'active' => '1',
@@ -339,6 +345,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'views_base_columns' => array(),
@@ -381,7 +388,7 @@ function humanitarianresponse_clusters_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-clusters-field_cluster_website'
+  // Exported field: 'taxonomy_term-clusters-field_cluster_website'.
   $fields['taxonomy_term-clusters-field_cluster_website'] = array(
     'field_config' => array(
       'active' => '1',
@@ -391,6 +398,7 @@ function humanitarianresponse_clusters_field_default_fields() {
       'field_name' => 'field_cluster_website',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'link',
       'settings' => array(
         'attributes' => array(
