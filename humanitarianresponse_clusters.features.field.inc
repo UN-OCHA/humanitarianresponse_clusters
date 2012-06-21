@@ -282,7 +282,6 @@ function humanitarianresponse_clusters_field_default_fields() {
             'parent' => '0',
           ),
         ),
-        'options_list_callback' => 'i18n_taxonomy_allowed_values',
         'views_base_columns' => array(),
         'views_base_table' => 0,
       ),
