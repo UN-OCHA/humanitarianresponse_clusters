@@ -5,6 +5,7 @@ package = Humanitarianresponse
 php = 5.2.4
 dependencies[] = email
 dependencies[] = features
+dependencies[] = hs_taxonomy
 dependencies[] = humanitarianresponse_organizations
 dependencies[] = image
 dependencies[] = menu

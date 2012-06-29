@@ -75,31 +75,38 @@ function humanitarianresponse_clusters_field_default_fields() {
   $fields['taxonomy_term-clusters-field_cluster_co_partners'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_cluster_co_partners',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
-        'format' => array(
+        'tid' => array(
           'columns' => array(
-            'format' => 'format',
+            'tid' => 'tid',
           ),
-          'table' => 'filter_format',
+          'table' => 'taxonomy_term_data',
         ),
       ),
       'indexes' => array(
-        'format' => array(
-          0 => 'format',
+        'tid' => array(
+          0 => 'tid',
         ),
       ),
       'locked' => '0',
-      'module' => 'text',
+      'module' => 'taxonomy',
       'settings' => array(
-        'views_base_columns' => array(),
-        'views_base_table' => 0,
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'organizations',
+            'parent' => '0',
+          ),
+        ),
       ),
       'translatable' => '0',
-      'type' => 'text_long',
+      'type' => 'taxonomy_term_reference',
     ),
     'field_instance' => array(
       'bundle' => 'clusters',
@@ -109,27 +116,24 @@ function humanitarianresponse_clusters_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
+          'module' => 'taxonomy',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 9,
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 14,
         ),
       ),
       'entity_type' => 'taxonomy_term',
       'field_name' => 'field_cluster_co_partners',
-      'label' => 'Co-leads/ Partners',
+      'label' => 'Co-leads / Partners',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '3',
-        ),
-        'type' => 'text_textarea',
+        'module' => 'hs_taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_hs',
         'weight' => '4',
       ),
     ),
@@ -311,9 +315,9 @@ function humanitarianresponse_clusters_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
+        'module' => 'hs_taxonomy',
         'settings' => array(),
-        'type' => 'options_select',
+        'type' => 'taxonomy_hs',
         'weight' => '3',
       ),
     ),
@@ -591,7 +595,7 @@ function humanitarianresponse_clusters_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Cluster Coordinator');
-  t('Co-leads/ Partners');
+  t('Co-leads / Partners');
   t('Description');
   t('Email');
   t('Lead Agencies');
