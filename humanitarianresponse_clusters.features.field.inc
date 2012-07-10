@@ -139,36 +139,52 @@ function humanitarianresponse_clusters_field_default_fields() {
     ),
   );
 
-  // Exported field: 'taxonomy_term-clusters-field_cluster_coordination_name'.
-  $fields['taxonomy_term-clusters-field_cluster_coordination_name'] = array(
+  // Exported field: 'taxonomy_term-clusters-field_cluster_coordinator'.
+  $fields['taxonomy_term-clusters-field_cluster_coordinator'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_cluster_coordination_name',
+      'field_name' => 'field_cluster_coordinator',
       'foreign keys' => array(
-        'format' => array(
+        'node' => array(
           'columns' => array(
-            'format' => 'format',
+            'target_id' => 'nid',
           ),
-          'table' => 'filter_format',
+          'table' => 'node',
         ),
       ),
       'indexes' => array(
-        'format' => array(
-          0 => 'format',
+        'target_id' => array(
+          0 => 'target_id',
         ),
       ),
       'locked' => '0',
-      'module' => 'text',
+      'module' => 'entityreference',
       'settings' => array(
-        'max_length' => '255',
-        'views_base_columns' => array(),
-        'views_base_table' => 0,
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'direction' => 'ASC',
+            'field' => 'field_asst_contact_email:email',
+            'property' => 'nid',
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'contact' => 'contact',
+          ),
+        ),
+        'handler_submit' => 'Change handler',
+        'target_type' => 'node',
       ),
       'translatable' => '0',
-      'type' => 'text',
+      'type' => 'entityreference',
     ),
     'field_instance' => array(
       'bundle' => 'clusters',
@@ -178,80 +194,30 @@ function humanitarianresponse_clusters_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 10,
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 15,
         ),
       ),
       'entity_type' => 'taxonomy_term',
-      'field_name' => 'field_cluster_coordination_name',
+      'field_name' => 'field_cluster_coordinator',
       'label' => 'Cluster Coordinator',
-      'required' => 0,
+      'required' => FALSE,
       'settings' => array(
-        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'text',
+        'module' => 'entityreference',
         'settings' => array(
-          'size' => '60',
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => 60,
         ),
-        'type' => 'text_textfield',
+        'type' => 'entityreference_autocomplete',
         'weight' => '6',
-      ),
-    ),
-  );
-
-  // Exported field: 'taxonomy_term-clusters-field_cluster_coordinator_email'.
-  $fields['taxonomy_term-clusters-field_cluster_coordinator_email'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_cluster_coordinator_email',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'email',
-      'settings' => array(
-        'views_base_columns' => array(),
-        'views_base_table' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'email',
-    ),
-    'field_instance' => array(
-      'bundle' => 'clusters',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'email',
-          'settings' => array(),
-          'type' => 'email_default',
-          'weight' => 11,
-        ),
-      ),
-      'entity_type' => 'taxonomy_term',
-      'field_name' => 'field_cluster_coordinator_email',
-      'label' => 'Email',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'email',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'email_textfield',
-        'weight' => '7',
       ),
     ),
   );
@@ -531,6 +497,93 @@ function humanitarianresponse_clusters_field_default_fields() {
     ),
   );
 
+  // Exported field: 'taxonomy_term-clusters-field_information_focal_points'.
+  $fields['taxonomy_term-clusters-field_information_focal_points'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_information_focal_points',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'node' => array(
+          'columns' => array(
+            'target_id' => 'nid',
+          ),
+          'table' => 'node',
+        ),
+      ),
+      'indexes' => array(
+        'target_id' => array(
+          0 => 'target_id',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'entityreference',
+      'settings' => array(
+        'handler' => 'base',
+        'handler_settings' => array(
+          'behaviors' => array(
+            'views-select-list' => array(
+              'status' => 0,
+            ),
+          ),
+          'sort' => array(
+            'direction' => 'ASC',
+            'field' => 'field_asst_contact_email:email',
+            'property' => 'nid',
+            'type' => 'none',
+          ),
+          'target_bundles' => array(
+            'contact' => 'contact',
+          ),
+        ),
+        'handler_submit' => 'Change handler',
+        'target_type' => 'node',
+      ),
+      'translatable' => '0',
+      'type' => 'entityreference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'clusters',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'entityreference',
+          'settings' => array(
+            'link' => FALSE,
+          ),
+          'type' => 'entityreference_label',
+          'weight' => 16,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_information_focal_points',
+      'label' => 'Information Focal Points',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'entityreference',
+        'settings' => array(
+          'match_operator' => 'CONTAINS',
+          'path' => '',
+          'size' => '60',
+        ),
+        'type' => 'entityreference_autocomplete',
+        'weight' => '7',
+      ),
+    ),
+  );
+
   // Exported field: 'taxonomy_term-clusters-name_field'.
   $fields['taxonomy_term-clusters-name_field'] = array(
     'field_config' => array(
@@ -597,7 +650,7 @@ function humanitarianresponse_clusters_field_default_fields() {
   t('Cluster Coordinator');
   t('Co-leads / Partners');
   t('Description');
-  t('Email');
+  t('Information Focal Points');
   t('Lead Agencies');
   t('Name');
   t('Prefix');
