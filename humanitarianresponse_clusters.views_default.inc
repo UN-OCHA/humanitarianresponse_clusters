@@ -236,9 +236,9 @@ function humanitarianresponse_clusters_views_default_views() {
   /* Display: Home */
   $handler = $view->new_display('block', 'Home', 'block_1');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['style_plugin'] = 'views_column_class';
+  $handler->display->display_options['style_options']['row_class'] = 'grid-4';
   $handler->display->display_options['style_options']['columns'] = '3';
-  $handler->display->display_options['style_options']['fill_single_line'] = 1;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
