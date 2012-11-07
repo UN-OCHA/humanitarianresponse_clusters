@@ -149,7 +149,7 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler->display->display_options['block_description'] = 'Clusters Home Page';
 
   /* Display: XLS */
-  $handler = $view->new_display('views_data_export', 'XLS', 'views_data_export_1');
+  $handler = $view->new_display('views_data_export', 'XLS', 'xls');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -217,6 +217,82 @@ function humanitarianresponse_clusters_views_default_views() {
     'block' => 0,
     'block_1' => 0,
   );
+
+  /* Display: XML */
+  $handler = $view->new_display('views_data_export', 'XML', 'xml');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_xml';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['transform'] = 1;
+  $handler->display->display_options['style_options']['transform_type'] = 'pascal';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name_field']['id'] = 'name_field';
+  $handler->display->display_options['fields']['name_field']['table'] = 'field_data_name_field';
+  $handler->display->display_options['fields']['name_field']['field'] = 'name_field';
+  $handler->display->display_options['fields']['name_field']['alter']['path'] = 'taxonomy/term/[tid]';
+  $handler->display->display_options['fields']['name_field']['element_class'] = '[field_cluster_prefix]';
+  $handler->display->display_options['fields']['name_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_field']['link_to_entity'] = 0;
+  /* Field: Taxonomy term: Prefix */
+  $handler->display->display_options['fields']['field_cluster_prefix_1']['id'] = 'field_cluster_prefix_1';
+  $handler->display->display_options['fields']['field_cluster_prefix_1']['table'] = 'field_data_field_cluster_prefix';
+  $handler->display->display_options['fields']['field_cluster_prefix_1']['field'] = 'field_cluster_prefix';
+  /* Field: Taxonomy term: Cluster Coordinator */
+  $handler->display->display_options['fields']['field_cluster_coordinator']['id'] = 'field_cluster_coordinator';
+  $handler->display->display_options['fields']['field_cluster_coordinator']['table'] = 'field_data_field_cluster_coordinator';
+  $handler->display->display_options['fields']['field_cluster_coordinator']['field'] = 'field_cluster_coordinator';
+  $handler->display->display_options['fields']['field_cluster_coordinator']['settings'] = array(
+    'link' => 0,
+  );
+  /* Field: Taxonomy term: Information Focal Points */
+  $handler->display->display_options['fields']['field_information_focal_points']['id'] = 'field_information_focal_points';
+  $handler->display->display_options['fields']['field_information_focal_points']['table'] = 'field_data_field_information_focal_points';
+  $handler->display->display_options['fields']['field_information_focal_points']['field'] = 'field_information_focal_points';
+  $handler->display->display_options['fields']['field_information_focal_points']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_information_focal_points']['delta_offset'] = '0';
+  /* Field: Taxonomy term: Lead Agencies */
+  $handler->display->display_options['fields']['field_cluster_lead_agencies']['id'] = 'field_cluster_lead_agencies';
+  $handler->display->display_options['fields']['field_cluster_lead_agencies']['table'] = 'field_data_field_cluster_lead_agencies';
+  $handler->display->display_options['fields']['field_cluster_lead_agencies']['field'] = 'field_cluster_lead_agencies';
+  $handler->display->display_options['fields']['field_cluster_lead_agencies']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_cluster_lead_agencies']['delta_offset'] = '0';
+  /* Field: Taxonomy term: Co-leads / Partners */
+  $handler->display->display_options['fields']['field_cluster_co_partners']['id'] = 'field_cluster_co_partners';
+  $handler->display->display_options['fields']['field_cluster_co_partners']['table'] = 'field_data_field_cluster_co_partners';
+  $handler->display->display_options['fields']['field_cluster_co_partners']['field'] = 'field_cluster_co_partners';
+  $handler->display->display_options['fields']['field_cluster_co_partners']['label'] = 'Co Leads Partners';
+  $handler->display->display_options['fields']['field_cluster_co_partners']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_cluster_co_partners']['delta_offset'] = '0';
+  /* Field: Taxonomy term: Description */
+  $handler->display->display_options['fields']['description_field']['id'] = 'description_field';
+  $handler->display->display_options['fields']['description_field']['table'] = 'field_data_description_field';
+  $handler->display->display_options['fields']['description_field']['field'] = 'description_field';
+  $handler->display->display_options['fields']['description_field']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['description_field']['link_to_entity'] = 0;
+  /* Field: Taxonomy term: Strategy */
+  $handler->display->display_options['fields']['field_cluster_strategy_activites']['id'] = 'field_cluster_strategy_activites';
+  $handler->display->display_options['fields']['field_cluster_strategy_activites']['table'] = 'field_data_field_cluster_strategy_activites';
+  $handler->display->display_options['fields']['field_cluster_strategy_activites']['field'] = 'field_cluster_strategy_activites';
+  $handler->display->display_options['fields']['field_cluster_strategy_activites']['alter']['strip_tags'] = TRUE;
+  /* Field: Taxonomy term: Website */
+  $handler->display->display_options['fields']['field_cluster_website']['id'] = 'field_cluster_website';
+  $handler->display->display_options['fields']['field_cluster_website']['table'] = 'field_data_field_cluster_website';
+  $handler->display->display_options['fields']['field_cluster_website']['field'] = 'field_cluster_website';
+  $handler->display->display_options['fields']['field_cluster_website']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_cluster_website']['type'] = 'link_plain';
+  $handler->display->display_options['path'] = 'clusters/xml';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+    'block' => 0,
+    'block_1' => 0,
+  );
   $translatables['clusters'] = array(
     t('Master'),
     t('Clusters'),
@@ -243,6 +319,8 @@ function humanitarianresponse_clusters_views_default_views() {
     t('Description'),
     t('Strategy'),
     t('Website'),
+    t('XML'),
+    t('Co Leads Partners'),
   );
   $export['clusters'] = $view;
 
