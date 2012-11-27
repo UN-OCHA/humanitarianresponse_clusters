@@ -210,7 +210,7 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler->display->display_options['fields']['field_cluster_website']['field'] = 'field_cluster_website';
   $handler->display->display_options['fields']['field_cluster_website']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_cluster_website']['type'] = 'link_plain';
-  $handler->display->display_options['path'] = 'clusters/xls';
+  $handler->display->display_options['path'] = 'clusters.xls';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
@@ -286,7 +286,7 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler->display->display_options['fields']['field_cluster_website']['field'] = 'field_cluster_website';
   $handler->display->display_options['fields']['field_cluster_website']['click_sort_column'] = 'url';
   $handler->display->display_options['fields']['field_cluster_website']['type'] = 'link_plain';
-  $handler->display->display_options['path'] = 'clusters/xml';
+  $handler->display->display_options['path'] = 'clusters.xml';
   $handler->display->display_options['displays'] = array(
     'page' => 'page',
     'default' => 0,
