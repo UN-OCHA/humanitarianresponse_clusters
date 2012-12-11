@@ -47,7 +47,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 13,
+          'weight' => '13',
         ),
         'ical' => array(
           'label' => 'above',
@@ -125,7 +125,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 14,
+          'weight' => '14',
         ),
         'ical' => array(
           'label' => 'above',
@@ -211,7 +211,7 @@ function humanitarianresponse_clusters_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 15,
+          'weight' => '15',
         ),
         'ical' => array(
           'label' => 'above',
@@ -287,7 +287,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'ical' => array(
           'label' => 'above',
@@ -352,10 +352,9 @@ function humanitarianresponse_clusters_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 1,
+          'type' => 'hidden',
+          'weight' => '1',
         ),
         'ical' => array(
           'label' => 'above',
@@ -425,7 +424,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 7,
+          'weight' => '7',
         ),
         'ical' => array(
           'label' => 'above',
@@ -497,7 +496,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           'module' => 'link',
           'settings' => array(),
           'type' => 'link_default',
-          'weight' => 5,
+          'weight' => '5',
         ),
         'ical' => array(
           'label' => 'above',
@@ -602,7 +601,7 @@ function humanitarianresponse_clusters_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 16,
+          'weight' => '16',
         ),
         'ical' => array(
           'label' => 'above',
@@ -671,7 +670,7 @@ function humanitarianresponse_clusters_field_default_fields() {
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 12,
+          'weight' => '12',
         ),
         'ical' => array(
           'label' => 'above',
