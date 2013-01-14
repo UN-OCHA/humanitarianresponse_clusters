@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ */
+ 
+/**
+ * Add feed importer into database
+ */
+function humanitarianresponse_clusters_update_7100() {
+  $source = feeds_source('csv_clusters');
+  $source->addConfig(array('FeedsHTTPFetcher' => array('source' => 'http://terms.humanitarianresponse.info/clusters.csv')));
+  $source->save();
+}
