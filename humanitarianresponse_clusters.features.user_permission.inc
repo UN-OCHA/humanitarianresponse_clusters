@@ -14,8 +14,8 @@ function humanitarianresponse_clusters_user_default_permissions() {
   $permissions['administer clusters vocabulary terms'] = array(
     'name' => 'administer clusters vocabulary terms',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
     ),
     'module' => 'vppr',
   );
