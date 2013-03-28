@@ -12,6 +12,7 @@ dependencies[] = features
 dependencies[] = feeds
 dependencies[] = feeds_et
 dependencies[] = hs_taxonomy
+dependencies[] = humanitarianresponse_core
 dependencies[] = humanitarianresponse_organizations
 dependencies[] = image
 dependencies[] = link
