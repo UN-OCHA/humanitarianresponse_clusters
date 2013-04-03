@@ -13,9 +13,9 @@ function humanitarianresponse_clusters_taxonomy_default_vocabularies() {
       'name' => 'Clusters',
       'machine_name' => 'clusters',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
