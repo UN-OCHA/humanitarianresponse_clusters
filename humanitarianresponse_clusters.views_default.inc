@@ -293,6 +293,18 @@ function humanitarianresponse_clusters_views_default_views() {
     'block' => 0,
     'block_1' => 0,
   );
+
+  /* Display: CSV */
+  $handler = $view->new_display('views_data_export', 'CSV', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['path'] = 'clusters.csv';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+    'block' => 0,
+    'block_1' => 0,
+  );
   $translatables['clusters'] = array(
     t('Master'),
     t('Clusters'),
@@ -321,6 +333,7 @@ function humanitarianresponse_clusters_views_default_views() {
     t('Website'),
     t('XML'),
     t('Co Leads Partners'),
+    t('CSV'),
   );
   $export['clusters'] = $view;
 
