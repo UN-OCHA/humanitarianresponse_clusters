@@ -53,6 +53,7 @@ function humanitarianresponse_clusters_views_default_views() {
   $handler->display->display_options['fields']['tid']['label'] = '';
   $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
   /* Field: Taxonomy term: Prefix */
   $handler->display->display_options['fields']['field_cluster_prefix']['id'] = 'field_cluster_prefix';
   $handler->display->display_options['fields']['field_cluster_prefix']['table'] = 'field_data_field_cluster_prefix';
