@@ -35,7 +35,7 @@ function humanitarianresponse_clusters_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsTermProcessor',
       'config' => array(
-        'vocabulary' => 'clusters',
+        'bundle' => 'clusters',
         'mappings' => array(
           0 => array(
             'source' => 'Name:en',
