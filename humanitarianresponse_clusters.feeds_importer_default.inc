@@ -40,7 +40,7 @@ function humanitarianresponse_clusters_feeds_importer_default() {
           0 => array(
             'source' => 'Name:en',
             'target' => 'name',
-            'unique' => 1,
+            'unique' => FALSE,
           ),
           1 => array(
             'source' => 'Name:en',
@@ -60,7 +60,7 @@ function humanitarianresponse_clusters_feeds_importer_default() {
           4 => array(
             'source' => 'GUID',
             'target' => 'guid',
-            'unique' => FALSE,
+            'unique' => 1,
           ),
           5 => array(
             'source' => 'Parent',
