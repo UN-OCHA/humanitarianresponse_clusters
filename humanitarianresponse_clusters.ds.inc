@@ -37,10 +37,12 @@ function humanitarianresponse_clusters_ds_layout_settings_info() {
       'field_information_focal_points' => 'ds_content',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
+    'layout_attributes_merge' => 1,
   );
   $export['taxonomy_term|clusters|default'] = $ds_layout;
 
