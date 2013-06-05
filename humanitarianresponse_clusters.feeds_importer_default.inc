@@ -53,6 +53,11 @@ function humanitarianresponse_clusters_feeds_importer_default() {
             'unique' => FALSE,
           ),
           3 => array(
+            'source' => 'Name:es',
+            'target' => 'name_field:et:es',
+            'unique' => FALSE,
+          ),
+          3 => array(
             'source' => 'Prefix',
             'target' => 'field_cluster_prefix',
             'unique' => FALSE,
