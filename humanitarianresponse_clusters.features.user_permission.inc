@@ -10,7 +10,7 @@
 function humanitarianresponse_clusters_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: administer clusters vocabulary terms.
+  // Exported permission: 'administer clusters vocabulary terms'.
   $permissions['administer clusters vocabulary terms'] = array(
     'name' => 'administer clusters vocabulary terms',
     'roles' => array(

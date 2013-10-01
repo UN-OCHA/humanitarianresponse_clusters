@@ -55,12 +55,15 @@ function humanitarianresponse_clusters_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_cluster_coordinator',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'foreign keys' => array(
-      'node' => array(
+      'profile' => array(
         'columns' => array(
-          'target_id' => 'nid',
+          'target_id' => 'pid',
         ),
-        'table' => 'node',
+        'table' => 'profile',
       ),
     ),
     'indexes' => array(
@@ -80,17 +83,13 @@ function humanitarianresponse_clusters_field_default_field_bases() {
           ),
         ),
         'sort' => array(
-          'direction' => 'ASC',
-          'field' => 'field_asst_contact_email:email',
-          'property' => 'nid',
           'type' => 'none',
         ),
-        'target_bundles' => array(
-          'contact' => 'contact',
-        ),
+        'target_bundles' => array(),
       ),
       'handler_submit' => 'Change handler',
-      'target_type' => 'node',
+      'profile2_private' => FALSE,
+      'target_type' => 'profile2',
     ),
     'translatable' => 0,
     'type' => 'entityreference',
@@ -278,11 +277,11 @@ function humanitarianresponse_clusters_field_default_field_bases() {
       'type' => 0,
     ),
     'foreign keys' => array(
-      'node' => array(
+      'profile' => array(
         'columns' => array(
-          'target_id' => 'nid',
+          'target_id' => 'pid',
         ),
-        'table' => 'node',
+        'table' => 'profile',
       ),
     ),
     'indexes' => array(
@@ -302,17 +301,13 @@ function humanitarianresponse_clusters_field_default_field_bases() {
           ),
         ),
         'sort' => array(
-          'direction' => 'ASC',
-          'field' => 'field_asst_contact_email:email',
-          'property' => 'nid',
           'type' => 'none',
         ),
-        'target_bundles' => array(
-          'contact' => 'contact',
-        ),
+        'target_bundles' => array(),
       ),
       'handler_submit' => 'Change handler',
-      'target_type' => 'node',
+      'profile2_private' => FALSE,
+      'target_type' => 'profile2',
     ),
     'translatable' => 0,
     'type' => 'entityreference',

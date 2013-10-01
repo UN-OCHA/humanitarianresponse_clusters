@@ -74,12 +74,13 @@ function humanitarianresponse_clusters_field_default_field_instances() {
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_cluster_coordinator',
     'label' => 'Cluster Coordinator',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
         'match_operator' => 'CONTAINS',

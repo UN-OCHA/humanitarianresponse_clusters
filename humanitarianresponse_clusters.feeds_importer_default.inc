@@ -57,17 +57,17 @@ function humanitarianresponse_clusters_feeds_importer_default() {
             'target' => 'name_field:et:es',
             'unique' => FALSE,
           ),
-          3 => array(
+          4 => array(
             'source' => 'Prefix',
             'target' => 'field_cluster_prefix',
             'unique' => FALSE,
           ),
-          4 => array(
+          5 => array(
             'source' => 'GUID',
             'target' => 'guid',
             'unique' => 1,
           ),
-          5 => array(
+          6 => array(
             'source' => 'Parent',
             'target' => 'parent',
             'unique' => FALSE,
